@@ -4,6 +4,7 @@ output: html_document
 ---
 
 
+
 I started off by setting up my working directories and getting the data from the files
 
 ```{r}
@@ -63,5 +64,5 @@ tidyData <- extractedData %>%
   dplyr::group_by(subjectID, activityID) %>%
   dplyr::summarise_all(dplyr::funs(mean))
 
-write.table(tidyData, "final.txt")
+write.table(tidyData, "final.txt", row.name = F)
 ```

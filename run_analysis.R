@@ -48,4 +48,4 @@ tidyData <- extractedData %>%
   dplyr::group_by(subjectID, activityID) %>%
   dplyr::summarise_all(dplyr::funs(mean))
 
-write.table(tidyData, "final.txt")
+write.table(tidyData, "final.txt", row.name = F)
